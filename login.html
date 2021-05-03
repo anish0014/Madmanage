@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+        .sign-in:link,
+        .sign-in:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            width: 100%;
+            background: none;
+            border: 2px solid #4caf50;
+        }
+
+        .sign-in:hover,
+        .sign-in:active {
+            background-color: rgb(85, 179, 57);
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="logo" class="pull-left">
+          <h1><a href="#body" class="scrollto">Med<span>Manage</span></a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+        </div>
+  
+    <div class="login-box" id="login_div">
+        <h1>LOGIN</h1>
+        <form id="Form">
+            <div class="textbox">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input type="text" placeholder="Username" name="" value="medmanage@gmail.com" id="email">
+            </div>
+            <div class="textbox">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                <input type="password" placeholder="Password" name="" value="12345" id="pass">
+            </div>
+
+            <a class="sign-in" href="#" onclick="login()">Sign In</a>
+            <a href="register.html" class="divit">New Register</a>
+            <a href="#" class="divit">Forget Password</a>
+
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/4382871bb8.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    <script>
+     var firebaseConfig = {
+    apiKey: "AIzaSyBGbEbMKjmXO_oWYq5HwYDmnXzKfbtkdzM",
+    authDomain: "medmanage-d8dc5.firebaseapp.com",
+    projectId: "medmanage-d8dc5",
+    storageBucket: "medmanage-d8dc5.appspot.com",
+    messagingSenderId: "1013237335424",
+    appId: "1:1013237335424:web:b3eec05b980260b390ad65",
+    measurementId: "G-HNHT002LPT"
+  };
+    
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+    </script>
+    <script src="login.js"></script>
+
+
+</body>
+
+</html>
